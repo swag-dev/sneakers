@@ -330,6 +330,7 @@ body .cart__modal .products {
       -ms-flex-pack: center;
           justify-content: center;
   height: 80%;
+  margin-top: 20%;
 }
 body .cart__modal .products p {
   font-weight: 700;
