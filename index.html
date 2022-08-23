@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="container">
+                <a href="#">
+                    <img src="/img/sneakers.svg" alt="logo">
+                </a>
+                <nav class="nav__links">
+                    <a href="#">
+                        <li>Collection</li>
+                    </a>
+                    <a href="#">
+                        <li>Men</li>
+                    </a>
+                    <a href="#">
+                        <li>Women</li>
+                    </a>
+                    <a href="#">
+                        <li>About</li>
+                    </a>
+                    <a href="#">
+                        <li>Contact</li>
+                    </a>
+                </nav>
+            </div>
+            <div class="container2">
+                <img class="cart" src="/img/cart.svg" alt="shopping cart">
+                    <img id="profile__pic" class="active" src="/img/profile__pic.png" alt="profile picture">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="container__images">
+                <div class="main__image_container">
+                    <img class="main__image" src="/img/image-product-1.jpg" alt="product image">
+                </div>
+                    
+                <div class="product__images">
+                    <img class="product__image active" src="img/product__img1.jpg" alt="product image">
+                    <img class="product__image" src="img/product__img2.jpg" alt="product image">
+                    <img class="product__image" src="img/product__img3.jpg" alt="product image">
+                    <img class="product__image" src="img/product__img4.jpg" alt="product image">
+                </div>
+            </div>
+            <div class="container__about">
+                <div class="container__paragraph">
+                    <h2>Sneaker Company</h2>
+                    <h1>Fall Limited Edition Sneakers</h1>
+                    <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                </div>
+                <div class="container__details">
+                    <div class="container__price">
+                        <div class="container__inner">
+                            <div class="price">
+                                <span>$125.00</span>
+                                <span>50%</span>
+                                <div>$250.00</div>
+                            </div>
+                            <div class="discount__timer">
+                                <div id="days" class="time">00</div>
+                                <div class="colon">:</div>
+                                <div id="hours" class="time">00</div>
+                                <div class="colon">:</div>
+                                <div id="minutes" class="time">00</div>
+                                <div class="colon">:</div>
+                                <div id="seconds" class="time">00</div>
+                            </div>
+                        </div>
+                        <div class="container__inner2">
+                            <div class="cart__calc">
+                                <div class="remove">
+                                    <div class="minus"></div>
+                                </div>
+                                <div class="product__amount">0</div>
+                                <div class="add">
+                                    <div class="plus"></div>
+                                    <div class="plus"></div>
+                                </div>
+                            </div>
+                            <button class="cart__adder">
+                                <img src="/img/cart2.svg" alt="shopping cart">
+                                <p>Add to cart</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- cart modal -->
+    <div class="cart__modal hidden">
+        <div class="container__heading">
+            <h3>Cart</h3>
+        </div>
+        <div class="products2">
+            <div class="container 1">
+                <div class="container__child">
+                    <img class="cart__img" src="/img/image-product-1.jpg" alt="product image">
+                    <div class="container__details">
+                        <p>Fall Limited Edition Sneakers</p>
+                        <span class="arith__op">$125.00 x 0</span>
+                        <span class="order__sum">$0.00</span>
+                    </div>
+                    <img class="remove__order" src="/img/bin.svg" alt="remove order">
+                </div>
+            </div>
+            <button>Checkout</button>
+        </div>
+        <div class="products">
+            <p>Your cart is empty.</p>
+        </div>
+    </div>
+
+    <!-- image modal -->
+    <div class="image__modal">
+        <div class="container__images2">
+            <div class="main__image_container2">
+                <div class="slider previous">
+                    <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Path 2" d="M11 2L3 10L11 18" stroke="#1D2026" stroke-width="3"/>
+                        </svg>
+                </div>
+                <div class="slider next">
+                    <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Path 2" d="M11 2L3 10L11 18" stroke="#1D2026" stroke-width="3"/>
+                        </svg>
+                </div>
+                <img class="main__image2" src="/img/image-product-1.jpg" alt="product image">
+                <div class="close__modal">
+                    <div class="close"></div>
+                    <div class="close"></div>
+                </div>
+            </div>
+            <div class="product__images2">
+                <img class="product__image2 active" src="img/product__img1.jpg" alt="product image">
+                <img class="product__image2" src="img/product__img2.jpg" alt="product image">
+                <img class="product__image2" src="img/product__img3.jpg" alt="product image">
+                <img class="product__image2" src="img/product__img4.jpg" alt="product image">
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="/js/imageModal.js"></script>
+    <script src="/js/cartAdder.js"></script>
+    <script src="/js/timer.js"></script>
+</body>
+</html>
