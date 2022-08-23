@@ -87,28 +87,24 @@ let modal = document.querySelector('.cart__modal'),
 
     cart.addEventListener('click', () => {
         modal.classList.toggle('hidden')
-        if(previousOrdersSum != 0 && container.children.length != 0){
+        if(container.children.length > 0){
             displayFlex(products)
             displayNone(productsEmpty)
-            console.log(previousOrdersSum)
-            console.log(previousOrders)
         }else{
             displayFlex(productsEmpty)
             displayNone(products)
-            console.log(previousOrdersSum)
-            console.log(previousOrders)
         }
     })
 
 
-removeOrder.forEach((item, index, array) => {
+removeOrder.forEach((item) => {
     item.addEventListener('click', () => {
         if(container.children.length != 1){
             containerChild[count].innerHTML = ``
             containerChild[count].style = ``
         }
-        container.innerHTML = ``
 
+        container.innerHTML = ``
         productAmount2[count] = 0
         productAmount.textContent = 0
         previousOrders[count] = 0
