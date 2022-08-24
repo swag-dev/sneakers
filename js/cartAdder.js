@@ -13,9 +13,11 @@ let modal = document.querySelector('.cart__modal'),
     productAmount = document.querySelector('.product__amount'),
     arithOp = document.querySelectorAll('.arith__op'),
     orderSum = document.querySelectorAll('.order__sum'),
+    orders = document.querySelector('.orders'),
     productAmount2 = [0, 0, 0, 0],
     prevOrders = [0, 0, 0, 0],
     prevOrdersSum = 0
+
 
     function displayFlex(element){
         element.style.display = `flex`
@@ -61,6 +63,7 @@ let modal = document.querySelector('.cart__modal'),
                     displayFlex(array[index])
                 }
             })
+            changeOrders()
     })
 
     cart.addEventListener('click', () => {
@@ -73,7 +76,6 @@ let modal = document.querySelector('.cart__modal'),
             displayNone(products)
         }
     })
-
     removeOrder.forEach((item, index, array) => {
         item.addEventListener('click', () => {
             productAmount2[index] = 0
@@ -86,5 +88,16 @@ let modal = document.querySelector('.cart__modal'),
                 displayFlex(productsEmpty)
                 displayNone(products)
             }
+            changeOrders()
         })
     })
+
+    function changeOrders(){
+        displayFlex(orders)
+        orders.innerText = prevOrdersSum
+        if(orders.innerText == '0'){
+            displayNone(orders)
+        }
+    }
+    orders.textContent = prevOrdersSum
+    console.log(orders.innerText)

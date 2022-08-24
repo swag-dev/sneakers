@@ -73,14 +73,44 @@ body header .wrapper .container2 {
   display: -ms-flexbox;
   display: flex;
 }
-body header .wrapper .container2 > * {
+body header .wrapper .container2 .cart__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body header .wrapper .container2 .cart__container .orders {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  top: 38%;
+  left: 50%;
+  width: 16px;
+  height: 10px;
+  background-color: #FF7E1B;
+  border-radius: 100px;
+  color: #fff;
+  font-size: 8px;
+}
+body header .wrapper .container2 .cart__container .cart {
   cursor: pointer;
+}
+body header .wrapper .container2 .cart__container .cart:hover path {
+  fill: #000;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 body header .wrapper .container2 #profile__pic {
   border-radius: 100%;
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
   border: 3px solid transparent;
+  cursor: pointer;
 }
 body header .wrapper .container2 #profile__pic:hover {
   border: 3px solid #FF7E1B;

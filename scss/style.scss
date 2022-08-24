@@ -51,13 +51,36 @@ body{
             }
             .container2{
                 display: flex;
-                &>*{
-                    cursor: pointer;
+                .cart__container{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    .orders{
+                        position: absolute;
+                        display: flex;
+                        place-content: center;
+                        top: 38%;
+                        left: 50%;
+                        width: 16px;
+                        height: 10px;
+                        background-color: #FF7E1B;
+                        border-radius: 100px;
+                        color: #fff;
+                        font-size: 8px;
+                    }
+                    .cart{
+                        cursor: pointer;
+                        &:hover path{
+                            fill: #000;
+                            transition: 0.5s;
+                        }
+                    }
                 }
                 #profile__pic{
                     border-radius: 100%;
                     transform: scale(0.5);
                     border: 3px solid transparent;
+                    cursor: pointer;
                     &:hover{
                         border: 3px solid #FF7E1B;
                     }
