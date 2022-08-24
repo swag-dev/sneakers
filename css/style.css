@@ -299,6 +299,10 @@ body main .wrapper .container__about .container__details .container__price .cont
   margin-right: 20px;
 }
 body .cart__modal {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
   width: 360px;
   min-height: 256px;
@@ -371,9 +375,6 @@ body .cart__modal .products2 .container .container__child {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 15px;
-}
-body .cart__modal .products2 .container .container__child .hidden {
-  display: none;
 }
 body .cart__modal .products2 .container .container__child > * {
   margin-right: 10px;

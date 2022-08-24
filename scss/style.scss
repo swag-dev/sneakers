@@ -243,6 +243,7 @@ body{
         }
     }
     .cart__modal{
+        flex-direction: column;
         position: absolute;
         width: 360px;
         min-height: 256px;
@@ -287,9 +288,6 @@ body{
                     display: flex;
                     justify-content: center;
                     margin-top: 15px;
-                    .hidden{
-                        display: none;
-                    }
                     &>*{
                         margin-right: 10px;
                     }

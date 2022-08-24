@@ -18,10 +18,10 @@ let modal = document.querySelector('.cart__modal'),
     prevOrdersSum = 0
 
     function displayFlex(element){
-        element.classList.remove('hidden')
+        element.style.display = `flex`
     }
     function displayNone(element){
-        element.classList.add('hidden')
+        element.style.display = `none`
     }
     plus[0].addEventListener('click', () => {
         productAmount2[count] += 1
