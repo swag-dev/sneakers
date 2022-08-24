@@ -2,7 +2,7 @@
 let modal = document.querySelector('.cart__modal'),
     cartImg = document.querySelectorAll('.cart__img'),
     container = document.querySelector('.products2 .container'),
-    containerChild = document.querySelectorAll('.container .container__child'),
+    containerChild = document.querySelectorAll('.container__child'),
     productsEmpty = document.querySelector('.products'),
     products = document.querySelector('.products2'),
     cart = document.querySelector('.cart'),
@@ -11,11 +11,11 @@ let modal = document.querySelector('.cart__modal'),
     minus = document.querySelector('.minus'),
     cartAdder = document.querySelector('.cart__adder'),
     productAmount = document.querySelector('.product__amount'),
-    arithOp = document.querySelector('.arith__op'),
-    orderSum = document.querySelector('.order__sum'),
+    arithOp = document.querySelectorAll('.arith__op'),
+    orderSum = document.querySelectorAll('.order__sum'),
     productAmount2 = [0, 0, 0, 0],
-    previousOrders = [0, 0, 0, 0],
-    previousOrdersSum = 0
+    prevOrders = [0, 0, 0, 0],
+    prevOrdersSum = 0
 
 
     function displayFlex(item){
@@ -44,48 +44,17 @@ let modal = document.querySelector('.cart__modal'),
 
 
     cartAdder.addEventListener('click', () => {
-        if(productAmount2[count] > 0){
-        if(!container.classList.contains(count + 1)){
-            container.classList.add(count + 1)
-            container.innerHTML += `
-            <div class="container__child">
-                    <img class="cart__img" src="img/image-product-${count + 1}.jpg" alt="product image">
-                    <div class="container__details">
-                        <p>Fall Limited Edition Sneakers</p>
-                        <span class="arith__op">$125.00 x 0</span>
-                        <span class="order__sum">$0.00</span>
-                    </div>
-                    <img class="remove__order" src="/img/bin.svg" alt="remove order">
-                </div>
-            `
             modal.classList.remove('hidden')
             displayFlex(products)
             displayNone(productsEmpty)
-            arithOp[count].innerHTML = `$125.00 x ${(previousOrders[count] + productAmount2[count])}`
-            orderSum[count].innerHTML = `$${125 * (previousOrders[count] + productAmount2[count])}.00`
-            previousOrders[count] += productAmount2[count]
+            arithOp[count].innerHTML = `$125.00 x ${(prevOrders[count] + productAmount2[count])}`
+            orderSum[count].innerHTML = `$${125 * (prevOrders[count] + productAmount2[count])}.00`
+            prevOrders[count] += productAmount2[count]
             productAmount.textContent = 0
             productAmount2[count] = 0
             console.log(productAmount2)
-            console.log(arithOp)
-            }
-            modal.classList.remove('hidden')
-            displayFlex(products)
-            displayNone(productsEmpty)
-            arithOp[count].innerHTML = `$125.00 x ${(previousOrders[count] + productAmount2[count])}`
-            orderSum[count].innerHTML = `$${125 * (previousOrders[count] + productAmount2[count])}.00`
-            previousOrders[count] += productAmount2[count]
-            productAmount.textContent = 0
-            productAmount2[count] = 0
-            console.log(productAmount2)
-            console.log(arithOp)
-        }
+            console.log(prevOrders)
     })
-
-
-    for(let i = 0; i < previousOrders.length; i++){
-            previousOrdersSum += previousOrders[i]
-    }
 
     cart.addEventListener('click', () => {
         modal.classList.toggle('hidden')
@@ -97,20 +66,3 @@ let modal = document.querySelector('.cart__modal'),
             displayNone(products)
         }
     })
-
-
-removeOrder.forEach((item) => {
-    item.addEventListener('click', () => {
-        if(container.children.length != 1){
-            containerChild[count].innerHTML = ``
-            containerChild[count].style = ``
-        }
-
-        container.innerHTML = ``
-        productAmount2[count] = 0
-        productAmount.textContent = 0
-        previousOrders[count] = 0
-        displayFlex(productsEmpty)
-        displayNone(products)
-})
-})
