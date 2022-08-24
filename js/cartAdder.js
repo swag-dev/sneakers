@@ -11,8 +11,8 @@ let modal = document.querySelector('.cart__modal'),
     minus = document.querySelector('.minus'),
     cartAdder = document.querySelector('.cart__adder'),
     productAmount = document.querySelector('.product__amount'),
-    arithOp = document.querySelectorAll('.arith__op'),
-    orderSum = document.querySelectorAll('.order__sum'),
+    arithOp = document.querySelector('.arith__op'),
+    orderSum = document.querySelector('.order__sum'),
     productAmount2 = [0, 0, 0, 0],
     previousOrders = [0, 0, 0, 0],
     previousOrdersSum = 0
@@ -58,7 +58,6 @@ let modal = document.querySelector('.cart__modal'),
                     <img class="remove__order" src="/img/bin.svg" alt="remove order">
                 </div>
             `
-            let arithOp = document.querySelectorAll('.arith__op')
             modal.classList.remove('hidden')
             displayFlex(products)
             displayNone(productsEmpty)
@@ -70,7 +69,6 @@ let modal = document.querySelector('.cart__modal'),
             console.log(productAmount2)
             console.log(arithOp)
             }
-            let arithOp = document.querySelectorAll('.arith__op')
             modal.classList.remove('hidden')
             displayFlex(products)
             displayNone(productsEmpty)
