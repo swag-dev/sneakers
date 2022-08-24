@@ -36,11 +36,13 @@ body{
                 display: flex;
                 height: 100%;
                 a{
+                    cursor: default;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     img:first-of-type{
                         margin-right: 60px;
+                        cursor: pointer;
                     }
                 }
                 .nav__links{
@@ -58,6 +60,7 @@ body{
                             margin-right: 28px;
                             border-bottom: 4px solid transparent;
                             &:hover{
+                                transition: 0.5s;
                                 color: #000;
                                 border-bottom: 4px solid #FF7E1B;
                             }
