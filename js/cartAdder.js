@@ -17,12 +17,11 @@ let modal = document.querySelector('.cart__modal'),
     prevOrders = [0, 0, 0, 0],
     prevOrdersSum = 0
 
-
-    function displayFlex(item){
-        item.style.display = "flex"
+    function displayFlex(element){
+        element.classList.remove('hidden')
     }
-    function displayNone(item){
-        item.style.display = "none"
+    function displayNone(element){
+        element.classList.add('hidden')
     }
     plus[0].addEventListener('click', () => {
         productAmount2[count] += 1
@@ -44,7 +43,7 @@ let modal = document.querySelector('.cart__modal'),
 
 
     cartAdder.addEventListener('click', () => {
-            modal.classList.remove('hidden')
+            displayFlex(modal)
             displayFlex(products)
             displayNone(productsEmpty)
             arithOp[count].innerHTML = `$125.00 x ${(prevOrders[count] + productAmount2[count])}`
@@ -52,13 +51,17 @@ let modal = document.querySelector('.cart__modal'),
             prevOrders[count] += productAmount2[count]
             productAmount.textContent = 0
             productAmount2[count] = 0
-            console.log(productAmount2)
+            prevOrdersSum = 0
+            for(let i = 0; i < prevOrders.length; i++){
+                prevOrdersSum += prevOrders[i]
+            }
             console.log(prevOrders)
+            console.log(prevOrdersSum)
     })
 
     cart.addEventListener('click', () => {
         modal.classList.toggle('hidden')
-        if(container.children.length > 0){
+        if(prevOrdersSum > 0){
             displayFlex(products)
             displayNone(productsEmpty)
         }else{

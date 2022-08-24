@@ -283,10 +283,13 @@ body{
                 flex-direction: column;
                 align-items: center;
                 margin-bottom: 30px;
-                & > *{
+                .container__child{
                     display: flex;
                     justify-content: center;
                     margin-top: 15px;
+                    .hidden{
+                        display: none;
+                    }
                     &>*{
                         margin-right: 10px;
                     }
