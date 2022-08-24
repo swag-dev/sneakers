@@ -41,7 +41,6 @@ let modal = document.querySelector('.cart__modal'),
         }
     })
 
-
     cartAdder.addEventListener('click', () => {
             modal.classList.remove('hidden')
             displayFlex(products)
@@ -62,8 +61,6 @@ let modal = document.querySelector('.cart__modal'),
                     displayFlex(array[index])
                 }
             })
-            console.log(prevOrders)
-            console.log(prevOrdersSum)
     })
 
     cart.addEventListener('click', () => {
@@ -82,11 +79,10 @@ let modal = document.querySelector('.cart__modal'),
             productAmount2[index] = 0
             prevOrdersSum = prevOrdersSum - prevOrders[index]
             prevOrders[index] = 0
+            if(prevOrdersSum > 0){
             displayNone(containerChild[index])
-            console.log(prevOrders)
-            console.log(prevOrdersSum)
-            console.log(containerChild)
-            if(containerChild.length === 1){
+            }
+            else{
                 displayFlex(productsEmpty)
                 displayNone(products)
             }
