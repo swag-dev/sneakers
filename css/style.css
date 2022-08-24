@@ -149,6 +149,10 @@ body main .wrapper .container__images .product__images .product__image {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+body main .wrapper .container__images .product__images .product__image:hover {
+  -webkit-filter: opacity(0.6);
+          filter: opacity(0.6);
+}
 body main .wrapper .container__images .product__images .product__image.active {
   border: 2px solid #FF7E1B;
   -webkit-filter: opacity(0.6);
@@ -542,6 +546,10 @@ body .image__modal .container__images2 .product__images2 .product__image2 {
   border-radius: 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+body .image__modal .container__images2 .product__images2 .product__image2:hover {
+  -webkit-filter: opacity(0.6);
+          filter: opacity(0.6);
 }
 body .image__modal .container__images2 .product__images2 .product__image2.active {
   border: 2px solid #FF7E1B;

@@ -114,6 +114,9 @@ body{
                         outline: 0;
                         border-radius: 10px;
                         transition: 0.5s;
+                        &:hover{
+                            filter: opacity(0.6);
+                        }
                         &.active{
                             border: 2px solid #FF7E1B;
                             filter: opacity(0.6);
@@ -435,6 +438,9 @@ body{
                     margin-right: 26px;
                     border-radius: 10px;
                     transition: 0.5s;
+                    &:hover{
+                        filter: opacity(0.6);
+                    }
                     &.active{
                         border: 2px solid #FF7E1B;
                         filter: opacity(0.6);
