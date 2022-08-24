@@ -59,7 +59,7 @@ let modal = document.querySelector('.cart__modal'),
                 if(prevOrders[index] === 0){
                     displayNone(array[index])
                 }else if(prevOrders[index] > 0){
-                    displayFlex(item)
+                    displayFlex(array[index])
                 }
             })
             console.log(prevOrders)
@@ -75,4 +75,20 @@ let modal = document.querySelector('.cart__modal'),
             displayFlex(productsEmpty)
             displayNone(products)
         }
+    })
+
+    removeOrder.forEach((item, index, array) => {
+        item.addEventListener('click', () => {
+            productAmount2[index] = 0
+            prevOrdersSum = prevOrdersSum - prevOrders[index]
+            prevOrders[index] = 0
+            displayNone(containerChild[index])
+            console.log(prevOrders)
+            console.log(prevOrdersSum)
+            console.log(containerChild)
+            if(containerChild.length === 1){
+                displayFlex(productsEmpty)
+                displayNone(products)
+            }
+        })
     })
