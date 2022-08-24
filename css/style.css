@@ -84,9 +84,7 @@ body header .wrapper .container2 .cart__container {
 }
 body header .wrapper .container2 .cart__container .orders {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   place-content: center;
   top: 38%;
   left: 50%;
@@ -312,6 +310,11 @@ body main .wrapper .container__about .container__details .container__price .cont
   outline: 0;
   border: 0;
 }
+body main .wrapper .container__about .container__details .container__price .container__inner2 .cart__adder:active {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  background-color: #FFAB6A;
+}
 body main .wrapper .container__about .container__details .container__price .container__inner2 .cart__adder img {
   -webkit-transform: scale(0.35);
           transform: scale(0.35);
@@ -481,6 +484,11 @@ body .image__modal .container__images2 .main__image_container2 .slider {
   border-radius: 100%;
   top: calc(50% - 28px);
   cursor: pointer;
+}
+body .image__modal .container__images2 .main__image_container2 .slider:hover svg path {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  stroke: #FF7E1B;
 }
 body .image__modal .container__images2 .main__image_container2 .previous {
   left: -20px;

@@ -57,7 +57,7 @@ body{
                     align-items: center;
                     .orders{
                         position: absolute;
-                        display: flex;
+                        display: none;
                         place-content: center;
                         top: 38%;
                         left: 50%;
@@ -247,6 +247,10 @@ body{
                                 margin-left: 20px;
                                 outline: 0;
                                 border: 0;
+                                &:active{
+                                    transition: 0.1s;
+                                    background-color: #FFAB6A;
+                                }
                                 img{
                                     transform: scale(0.35);
                                 }
@@ -379,6 +383,10 @@ body{
                     border-radius: 100%;
                     top: calc(50% - 28px);
                     cursor: pointer;
+                    &:hover svg path{
+                        transition: 0.5s;
+                        stroke: #FF7E1B;
+                    }
                 }
                 .previous{
                     left: -20px;

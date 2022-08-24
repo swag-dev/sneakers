@@ -44,6 +44,7 @@ let modal = document.querySelector('.cart__modal'),
     })
 
     cartAdder.addEventListener('click', () => {
+        if(productAmount.textContent != 0){
             modal.classList.remove('hidden')
             displayFlex(products)
             displayNone(productsEmpty)
@@ -64,6 +65,7 @@ let modal = document.querySelector('.cart__modal'),
                 }
             })
             changeOrders()
+        }
     })
 
     cart.addEventListener('click', () => {
