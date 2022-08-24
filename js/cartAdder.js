@@ -43,7 +43,7 @@ let modal = document.querySelector('.cart__modal'),
 
 
     cartAdder.addEventListener('click', () => {
-            displayFlex(modal)
+            modal.classList.remove('hidden')
             displayFlex(products)
             displayNone(productsEmpty)
             arithOp[count].innerHTML = `$125.00 x ${(prevOrders[count] + productAmount2[count])}`
@@ -55,6 +55,13 @@ let modal = document.querySelector('.cart__modal'),
             for(let i = 0; i < prevOrders.length; i++){
                 prevOrdersSum += prevOrders[i]
             }
+            containerChild.forEach((item, index, array) => {
+                if(prevOrders[index] === 0){
+                    displayNone(array[index])
+                }else if(prevOrders[index] > 0){
+                    displayFlex(item)
+                }
+            })
             console.log(prevOrders)
             console.log(prevOrdersSum)
     })
