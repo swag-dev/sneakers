@@ -552,7 +552,7 @@ body .image__modal .container__images2 .main__image_container2 .close__modal {
   position: absolute;
   width: 20px;
   height: 20px;
-  right: 0;
+  right: 15px;
   top: -40px;
   cursor: pointer;
 }
