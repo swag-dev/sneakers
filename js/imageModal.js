@@ -23,6 +23,8 @@ function addActive(item){
                 count = index
                 mainImage.src = `img/image-product-${index + 1}.jpg`
                 mainImage2.src = `img/image-product-${index + 1}.jpg`
+                addActive(productImages[count])
+                addActive(productImages2[count])
             })
         })
         element2.forEach((item, index) => {
@@ -33,6 +35,8 @@ function addActive(item){
                 count = index
                 mainImage.src = `img/image-product-${index + 1}.jpg`
                 mainImage2.src = `img/image-product-${index + 1}.jpg`
+                addActive(productImages[count])
+                addActive(productImages2[count])
             })
         })
     }
