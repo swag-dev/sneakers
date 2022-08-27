@@ -450,6 +450,12 @@ body .cart__modal .products2 .container .container__child {
 body .cart__modal .products2 .container .container__child > * {
   margin-right: 10px;
 }
+body .cart__modal .products2 .container .container__child .remove__order {
+  cursor: pointer;
+}
+body .cart__modal .products2 .container .container__child .remove__order:hover path {
+  fill: #EA2027;
+}
 body .cart__modal .products2 .container .container__child .cart__img {
   width: 50px;
   height: 50px;
