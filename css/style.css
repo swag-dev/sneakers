@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@import url(media.scss);
 * {
   margin: 0;
   padding: 0;
@@ -22,13 +23,6 @@ a, button, li {
   display: none;
 }
 
-.wrapper {
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 body header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,6 +34,10 @@ body header {
   height: 100px;
 }
 body header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
   height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -53,7 +51,31 @@ body header .wrapper .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
+}
+body header .wrapper .container .hamburger {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 15px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-right: 15px;
+  cursor: pointer;
+}
+body header .wrapper .container .hamburger div {
+  width: 16px;
+  height: 3px;
+  background-color: #D8D8D8;
 }
 body header .wrapper .container a {
   cursor: default;
@@ -68,13 +90,15 @@ body header .wrapper .container a {
           justify-content: center;
 }
 body header .wrapper .container a img:first-of-type {
-  margin-right: 60px;
+  margin-bottom: 6px;
+  margin-right: 4vw;
   cursor: pointer;
 }
 body header .wrapper .container .nav__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
 }
 body header .wrapper .container .nav__links a {
   cursor: default;
@@ -93,7 +117,7 @@ body header .wrapper .container .nav__links a li {
   font-weight: 400;
   font-size: 15px;
   color: #69707D;
-  margin-right: 28px;
+  margin-right: 2.5vw;
   border-bottom: 4px solid transparent;
 }
 body header .wrapper .container .nav__links a li:hover {
@@ -106,6 +130,9 @@ body header .wrapper .container2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 body header .wrapper .container2 .cart__container {
   position: relative;
@@ -115,12 +142,13 @@ body header .wrapper .container2 .cart__container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 20px;
 }
 body header .wrapper .container2 .cart__container .orders {
   position: absolute;
   display: none;
   place-content: center;
-  top: 38%;
+  top: 30%;
   left: 50%;
   width: 16px;
   height: 10px;
@@ -139,13 +167,13 @@ body header .wrapper .container2 .cart__container .cart:hover path {
 }
 body header .wrapper .container2 #profile__pic {
   border-radius: 100%;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
-  border: 3px solid transparent;
+  width: 50px;
+  height: 50px;
+  border: 1.5px solid transparent;
   cursor: pointer;
 }
 body header .wrapper .container2 #profile__pic:hover {
-  border: 3px solid #FF7E1B;
+  border: 1.5px solid #FF7E1B;
 }
 body main {
   display: -webkit-box;
@@ -157,26 +185,34 @@ body main {
   margin-bottom: 100px;
 }
 body main .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 74%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 100px;
 }
-body main .wrapper .container__images .main__image {
+body main .wrapper .container__images .main__image_container .main__image {
   width: 445px;
   height: 445px;
   border-radius: 15px;
   cursor: pointer;
 }
 body main .wrapper .container__images .product__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 24px;
 }
 body main .wrapper .container__images .product__images .product__image {
   width: 88px;
   height: 88px;
   cursor: pointer;
-  margin-right: 26px;
   border: 0;
   outline: 0;
   border-radius: 10px;
@@ -196,6 +232,8 @@ body main .wrapper .container__images .product__images .product__image.active {
 }
 body main .wrapper .container__about {
   width: 45%;
+  max-width: 460px;
+  margin-left: 10%;
 }
 body main .wrapper .container__about .container__paragraph {
   display: -webkit-box;
@@ -234,6 +272,9 @@ body main .wrapper .container__about .container__paragraph p {
 body main .wrapper .container__about .container__details {
   margin-top: 20px;
 }
+body main .wrapper .container__about .container__details .container__price {
+  position: relative;
+}
 body main .wrapper .container__about .container__details .container__price .container__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -266,13 +307,15 @@ body main .wrapper .container__about .container__details .container__price .cont
   margin-top: 10px;
 }
 body main .wrapper .container__about .container__details .container__price .container__inner .discount__timer {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-left: 100px;
+  top: 25%;
+  right: 0;
 }
 body main .wrapper .container__about .container__details .container__price .container__inner .discount__timer .time {
   font-weight: 700;
@@ -381,8 +424,8 @@ body .cart__modal {
   -webkit-box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.503143);
           box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.503143);
   border-radius: 10px;
-  top: 80px;
-  right: 100px;
+  top: 100px;
+  right: 3%;
 }
 body .cart__modal .container__heading {
   width: 100%;
@@ -540,7 +583,7 @@ body .image__modal .container__images2 .main__image_container2 .previous {
 body .image__modal .container__images2 .main__image_container2 .next {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  right: -12px;
+  right: -20px;
 }
 body .image__modal .container__images2 .main__image_container2 .main__image2 {
   width: 445px;
@@ -552,7 +595,7 @@ body .image__modal .container__images2 .main__image_container2 .close__modal {
   position: absolute;
   width: 20px;
   height: 20px;
-  right: 15px;
+  right: 0;
   top: -40px;
   cursor: pointer;
 }
@@ -576,13 +619,18 @@ body .image__modal .container__images2 .main__image_container2 .close__modal > d
           transform: rotate(135deg);
 }
 body .image__modal .container__images2 .product__images2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 24px;
 }
 body .image__modal .container__images2 .product__images2 .product__image2 {
   width: 88px;
   height: 88px;
   cursor: pointer;
-  margin-right: 26px;
   border-radius: 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;

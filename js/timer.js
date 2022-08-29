@@ -25,7 +25,6 @@ function getInterval(){
     seconds.textContent = addZero(seconds2)
     return time
 }
-
 let interval = setInterval(getInterval, 1000)
 if(getInterval() < 0){
     clearInterval(interval)
