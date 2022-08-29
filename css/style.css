@@ -194,14 +194,6 @@ body main .wrapper {
           justify-content: space-between;
   margin-top: 100px;
 }
-body main .wrapper .container__images .main__image_container {
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
 body main .wrapper .container__images .main__image_container .main__image {
   width: 445px;
   height: 445px;
@@ -284,12 +276,14 @@ body main .wrapper .container__about .container__details .container__price {
   position: relative;
 }
 body main .wrapper .container__about .container__details .container__price .container__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+body main .wrapper .container__about .container__details .container__price .container__inner .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 body main .wrapper .container__about .container__details .container__price .container__inner .price span:first-of-type {
   font-weight: 700;
@@ -297,35 +291,41 @@ body main .wrapper .container__about .container__details .container__price .cont
   color: #1D2026;
 }
 body main .wrapper .container__about .container__details .container__price .container__inner .price span:nth-of-type(2) {
-  width: 35px;
-  height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 28px;
   background-color: #FFEEE2;
-  padding: 5px 10px;
   border-radius: 6px;
   font-weight: 700;
   color: #FF7E1B;
   margin-left: 20px;
 }
-body main .wrapper .container__about .container__details .container__price .container__inner .price div {
+body main .wrapper .container__about .container__details .container__price .container__inner .price2 div {
   font-weight: 700;
   font-size: 16px;
   -webkit-text-decoration-line: line-through;
           text-decoration-line: line-through;
   color: #B6BCC8;
-  margin-top: 10px;
 }
-body main .wrapper .container__about .container__details .container__price .container__inner .discount__timer {
-  position: absolute;
+body main .wrapper .container__about .container__details .container__price .discount__timer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   top: 35%;
   right: 0;
 }
-body main .wrapper .container__about .container__details .container__price .container__inner .discount__timer .time {
+body main .wrapper .container__about .container__details .container__price .discount__timer .time {
   font-weight: 700;
   font-size: 16px;
   color: #FF7E1B;
@@ -333,7 +333,7 @@ body main .wrapper .container__about .container__details .container__price .cont
   padding: 5px 10px;
   border-radius: 6px;
 }
-body main .wrapper .container__about .container__details .container__price .container__inner .discount__timer .colon {
+body main .wrapper .container__about .container__details .container__price .discount__timer .colon {
   margin: 0 3px;
   margin-bottom: 7px;
   font-weight: 700;

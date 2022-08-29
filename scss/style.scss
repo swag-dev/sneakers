@@ -137,8 +137,6 @@ body{
             margin-top: 100px;
             .container__images{
                 .main__image_container{
-                    height: max-content;
-                    width: max-content;
                     .main__image{
                         width: 445px;
                         height: 445px;
@@ -205,52 +203,54 @@ body{
                     .container__price{
                         position: relative;
                         .container__inner{
-                            display: flex;
                             width: max-content;
                             .price{
+                                display: flex;
                                 span:first-of-type{
                                     font-weight: 700;
                                     font-size: 28px;
                                     color: #1D2026;
                                 }
                                 span:nth-of-type(2){
-                                    width: 35px;
-                                    height: 15px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 50px;
+                                    height: 28px;
                                     background-color: #FFEEE2;
-                                    padding: 5px 10px;
                                     border-radius: 6px;
                                     font-weight: 700;
                                     color: #FF7E1B;
                                     margin-left: 20px;                               
                                 }
+                            }
+                            .price2{
                                 div{
                                     font-weight: 700;
                                     font-size: 16px;
                                     text-decoration-line: line-through;
                                     color: #B6BCC8;
-                                    margin-top: 10px;
                                 }
                             }
-                            .discount__timer{
-                                position: absolute;
-                                display: flex;
-                                align-items: flex-end;
-                                top: 35%;
-                                right: 0;
-                                .time{
-                                    font-weight: 700;
-                                    font-size: 16px;
-                                    color: #FF7E1B;
-                                    background-color: #FFEEE2;
-                                    padding: 5px 10px;
-                                    border-radius: 6px;
-                                }
-                                .colon{
-                                    margin: 0 3px;
-                                    margin-bottom: 7px;
-                                    font-weight: 700;
-                                    color: #FF7E1B;
-                                }
+                        }
+                        .discount__timer{
+                            display: flex;
+                            justify-content: flex-end;
+                            top: 35%;
+                            right: 0;
+                            .time{
+                                font-weight: 700;
+                                font-size: 16px;
+                                color: #FF7E1B;
+                                background-color: #FFEEE2;
+                                padding: 5px 10px;
+                                border-radius: 6px;
+                            }
+                            .colon{
+                                margin: 0 3px;
+                                margin-bottom: 7px;
+                                font-weight: 700;
+                                color: #FF7E1B;
                             }
                         }
                         .container__inner2{

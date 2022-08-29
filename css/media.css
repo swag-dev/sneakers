@@ -159,9 +159,79 @@
     border: 0;
   }
   body main .wrapper {
+    margin: 0;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  body main .wrapper .container__images {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+  body main .wrapper .container__images .main__image_container .main__image {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  body main .wrapper .container__images .product__images {
+    display: none;
+  }
+  body main .wrapper .container__about {
+    margin: 0;
+    width: 90%;
+  }
+  body main .wrapper .container__about .container__paragraph h2 {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  body main .wrapper .container__about .container__paragraph h1 {
+    font-size: 28px;
+  }
+  body main .wrapper .container__about .container__paragraph p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  body main .wrapper .container__about .container__details .container__price .container__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  body main .wrapper .container__about .container__details .container__price .container__inner .price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  body main .wrapper .container__about .container__details .container__price .container__inner .price div {
+    margin: 0;
+  }
+  body main .wrapper .container__about .container__details .container__price .discount__timer {
+    margin-top: 20px;
+  }
+  body main .wrapper .container__about .container__details .container__price .container__inner2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .wrapper .container__about .container__details .container__price .container__inner2 .cart__calc {
+    width: 100%;
+  }
+  body main .wrapper .container__about .container__details .container__price .container__inner2 .cart__adder {
+    margin: 0;
+    margin-top: 20px;
+    width: 100%;
   }
 }/*# sourceMappingURL=media.css.map */
