@@ -186,6 +186,7 @@
                 }
                 .container__details{
                     .container__price{
+                        margin: 0;
                         .container__inner{
                             .price{
                                 span:first-of-type{
@@ -193,6 +194,26 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    body{
+        header{
+            .wrapper{
+                border: 0;
+            }
+        }
+        main{
+            .wrapper{
+                flex-direction: column;
+                .container__images{
+                    .main__image_container{
+
                     }
                 }
             }

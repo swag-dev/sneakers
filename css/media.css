@@ -147,7 +147,21 @@
     margin-top: 5px;
     line-height: 24px;
   }
+  body main .wrapper .container__details .container__price {
+    margin: 0;
+  }
   body main .wrapper .container__details .container__price .container__inner .price span:first-of-type {
     font-size: 22px;
+  }
+}
+@media screen and (max-width: 600px) {
+  body header .wrapper {
+    border: 0;
+  }
+  body main .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }/*# sourceMappingURL=media.css.map */

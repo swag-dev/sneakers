@@ -351,6 +351,7 @@ body main .wrapper .container__about .container__details .container__price .cont
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding-right: 10px;
   width: 160px;
   height: 56px;
   background-color: #F6F8FD;
