@@ -1,3 +1,31 @@
+@media screen and (min-width: 1400px) {
+  body main .wrapper {
+    width: 75%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body main .wrapper .container__images .main__image_container .main__image {
+    width: 540px;
+    height: 540px;
+  }
+  body main .wrapper .container__images .product__images .product__image {
+    width: 100px;
+    height: 100px;
+  }
+  body main .wrapper .container__about .container__paragraph h2 {
+    font-size: 16px;
+  }
+  body main .wrapper .container__about .container__paragraph h1 {
+    font-size: 44px;
+  }
+  body main .wrapper .container__about .container__paragraph p {
+    font-size: 18px;
+  }
+  body main .wrapper .container__about .container__details .container__price .container__inner .price span:first-of-type {
+    font-size: 38px;
+  }
+}
 @media screen and (max-width: 992px) {
   body header {
     height: 70px;
@@ -67,10 +95,59 @@
     margin: 5px 30px;
   }
   body main .wrapper {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     margin: 40px 0;
     width: 90%;
   }
-  body main .wrapper .container__about {
-    margin-left: 5%;
+  body main .wrapper .container__images .main__image_container .main__image {
+    width: 350px;
+    height: 350px;
+  }
+  body main .wrapper .container__images .product__images .product__image {
+    width: 75px;
+    height: 75px;
+  }
+  body main .wrapper .container__about .container__paragraph h2 {
+    margin-top: 20px;
+  }
+  body main .wrapper .container__about .container__paragraph h1 {
+    line-height: 36px;
+    font-size: 36px;
+  }
+  body main .wrapper .container__about .container__paragraph p {
+    margin-top: 10px;
+  }
+  body main .wrapper .container__about .container__details .container__price .container__inner2 {
+    margin-top: 30px;
+  }
+  body .cart__modal {
+    top: 80px;
+  }
+}
+@media screen and (max-width: 700px) {
+  body main .wrapper .container__images .main__image_container .main__image {
+    width: 300px;
+    height: 300px;
+  }
+  body main .wrapper .container__images .product__images .product__image {
+    width: 65px;
+    height: 65px;
+  }
+  body main .wrapper .container__about .container__paragraph h2 {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  body main .wrapper .container__about .container__paragraph h1 {
+    margin-top: 10px;
+    font-size: 30px;
+  }
+  body main .wrapper .container__about .container__paragraph p {
+    margin-top: 5px;
+    line-height: 24px;
+  }
+  body main .wrapper .container__details .container__price .container__inner .price span:first-of-type {
+    font-size: 22px;
   }
 }/*# sourceMappingURL=media.css.map */

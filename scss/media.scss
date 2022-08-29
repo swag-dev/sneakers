@@ -1,4 +1,51 @@
-
+@media screen and (min-width: 1400px){
+    body{
+        main{
+            .wrapper{
+                width: 75%;
+                justify-content: space-evenly;
+                .container__images{
+                    .main__image_container{
+                        .main__image{
+                            width: 540px;
+                            height: 540px;
+                        }
+                    }
+                    .product__images{
+                        .product__image{
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+                }
+                .container__about{
+                    .container__paragraph{
+                        h2{
+                            font-size: 16px;
+                        }
+                        h1{
+                            font-size: 44px;
+                        }
+                        p{
+                            font-size: 18px;
+                        }
+                    }
+                    .container__details{
+                        .container__price{
+                            .container__inner{
+                                .price{
+                                    span:first-of-type{
+                                        font-size: 38px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width: 992px){
     body{
         header{
@@ -58,10 +105,95 @@
         }
         main{
             .wrapper{
+                justify-content: space-evenly;
                 margin: 40px 0;
                 width: 90%;
+                .container__images{
+                    .main__image_container{
+                        .main__image{
+                            width: 350px;
+                            height: 350px;
+                        }
+                    }
+                    .product__images{
+                        .product__image{
+                            width: 75px;
+                            height: 75px;
+                        }
+                    }
+                }
                 .container__about{
-                    margin-left: 5%;
+                    .container__paragraph{
+                        h2{
+                            margin-top: 20px;
+                        }
+                        h1{
+                            line-height: 36px;
+                            font-size: 36px;
+                        }
+                        p{
+                            margin-top: 10px;
+                        }
+                    }
+                    .container__details{
+                        .container__price{
+                            .container__inner2{
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .cart__modal{
+            top: 80px;
+        }
+    }
+}
+@media screen and (max-width: 700px){
+    body{
+        main{
+            .wrapper{
+                .container__images{
+                    .main__image_container{
+                        .main__image{
+                            width: 300px;
+                            height: 300px;
+                        }
+                    }
+                    .product__images{
+                        .product__image{
+                            width: 65px;
+                            height: 65px;
+                        }
+                    }
+                }
+                .container__about{
+                    .container__paragraph{
+                        h2{
+                            margin-top: 5px;
+                            font-size: 12px;
+                        }
+                        h1{
+                            margin-top: 10px;
+                            font-size: 30px;
+                        }
+                        p{
+                            margin-top: 5px;
+                            line-height: 24px;
+                        }
+                    }
+                }
+                .container__details{
+                    .container__price{
+                        .container__inner{
+                            .price{
+                                span:first-of-type{
+                                    font-size: 22px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

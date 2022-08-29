@@ -132,11 +132,13 @@ body{
         margin-bottom: 100px;
         .wrapper{
             display: flex;
-            width: 74%;
+            width: 80%;
             justify-content: space-between;
             margin-top: 100px;
             .container__images{
                 .main__image_container{
+                    height: max-content;
+                    width: max-content;
                     .main__image{
                         width: 445px;
                         height: 445px;
@@ -170,7 +172,7 @@ body{
             .container__about{
                 width: 45%;
                 max-width: 460px;
-                margin-left: 10%;
+                margin-left: 5%;
                 .container__paragraph{
                     display: flex;
                     flex-direction: column;
@@ -233,7 +235,7 @@ body{
                                 position: absolute;
                                 display: flex;
                                 align-items: flex-end;
-                                top: 25%;
+                                top: 35%;
                                 right: 0;
                                 .time{
                                     font-weight: 700;
