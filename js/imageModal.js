@@ -43,7 +43,9 @@ function addActive(item){
     setImage(productImages, productImages2)
 
 mainImage.addEventListener('click', () => {
+    if(window.innerWidth > 600){
     addActive(modalMainImage)
+    }
 })
 closeModal.addEventListener('click', () => {
     modalMainImage.classList.remove('active')
@@ -53,10 +55,22 @@ closeModal.addEventListener('click', () => {
 let slide = document.querySelectorAll('.slider'),
     prev = slide[0],
     next = slide[1],
+    slide2 = document.querySelectorAll('.slider2'),
+    prev2 = slide2[0],
+    next2 = slide2[1]
     count = 0
 prev.addEventListener('click', () => {
-    if(count !== 0){
-        count--
+    count--
+    if(count === -1){
+        count = 3
+        mainImage.src = `img/image-product-${count + 1}.jpg`
+        mainImage2.src = `img/image-product-${count + 1}.jpg`
+        removeActive(productImages)
+        removeActive(productImages2)
+        addActive(productImages[count])
+        addActive(productImages2[count])
+    }
+    if(count >= 0){
         mainImage.src = `img/image-product-${count + 1}.jpg`
         mainImage2.src = `img/image-product-${count + 1}.jpg`
         removeActive(productImages)
@@ -66,14 +80,63 @@ prev.addEventListener('click', () => {
     }
 })
 next.addEventListener('click', () => {
-    if(count < 3){
     count++
+    if(count <= 3){
     mainImage.src = `img/image-product-${count + 1}.jpg`
     mainImage2.src = `img/image-product-${count + 1}.jpg`
     removeActive(productImages)
     removeActive(productImages2)
     addActive(productImages[count])
     addActive(productImages2[count])
+    }
+    if(count === 4){
+        count = 0
+        mainImage.src = `img/image-product-${count + 1}.jpg`
+        mainImage2.src = `img/image-product-${count + 1}.jpg`
+        removeActive(productImages)
+        removeActive(productImages2)
+        addActive(productImages[count])
+        addActive(productImages2[count])
+    }
+})
+prev2.addEventListener('click', () => {
+    count--
+    if(count === -1){
+        count = 3
+        mainImage.src = `img/image-product-${count + 1}.jpg`
+        mainImage2.src = `img/image-product-${count + 1}.jpg`
+        removeActive(productImages)
+        removeActive(productImages2)
+        addActive(productImages[count])
+        addActive(productImages2[count])
+    }
+    if(count >= 0){
+        mainImage.src = `img/image-product-${count + 1}.jpg`
+        mainImage2.src = `img/image-product-${count + 1}.jpg`
+        removeActive(productImages)
+        removeActive(productImages2)
+        addActive(productImages[count])
+        addActive(productImages2[count])
+    }
+})
+next2.addEventListener('click', () => {
+    count++
+    if(count <= 3){
+    mainImage.src = `img/image-product-${count + 1}.jpg`
+    mainImage2.src = `img/image-product-${count + 1}.jpg`
+    removeActive(productImages)
+    removeActive(productImages2)
+    addActive(productImages[count])
+    addActive(productImages2[count])
+    }
+    if(count === 4){
+        count = 0
+        mainImage.src = `img/image-product-${count + 1}.jpg`
+        mainImage2.src = `img/image-product-${count + 1}.jpg`
+        removeActive(productImages)
+        removeActive(productImages2)
+        addActive(productImages[count])
+        addActive(productImages2[count])
     }
 })
 

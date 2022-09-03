@@ -1,4 +1,4 @@
-let discount = '2022-09-01'
+let discount = '2022-09-10'
 
 function addZero(timeUnit){
     if(timeUnit < 10){
@@ -28,4 +28,8 @@ function getInterval(){
 let interval = setInterval(getInterval, 1000)
 if(getInterval() < 0){
     clearInterval(interval)
+    days.textContent = '00'
+    hours.textContent = '00'
+    minutes.textContent = '00'
+    seconds.textContent = '00'
 }

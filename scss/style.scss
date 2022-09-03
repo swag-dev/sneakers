@@ -63,6 +63,7 @@ body{
                 .nav__links{
                     display: flex;
                     height: 100%;
+                    z-index: 99999999;
                     a{
                         cursor: default;
                         li{
@@ -137,6 +138,31 @@ body{
             margin-top: 100px;
             .container__images{
                 .main__image_container{
+                    position: relative;
+                    .slider2{
+                        display: none;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        width: 40px;
+                        height: 40px;
+                        background-color: #fff;
+                        z-index: 999999;
+                        border-radius: 100%;
+                        top: calc(50% - 28px);
+                        cursor: pointer;
+                        &:hover svg path{
+                            transition: 0.5s;
+                            stroke: #FF7E1B;
+                        }
+                        &:first-of-type{
+                            left: 10px;
+                        }             
+                        &:nth-of-type(2){
+                            right: 10px;
+                            transform: rotate(180deg);
+                        }       
+                    }
                     .main__image{
                         width: 445px;
                         height: 445px;
@@ -276,6 +302,9 @@ body{
                                         cursor: pointer;
                                     }
                                 }
+                                .product__amount{
+                                    font-weight: 700;
+                                }
                                 .add{
                                     position: relative;
                                     div{
@@ -326,7 +355,7 @@ body{
         flex-direction: column;
         position: absolute;
         width: 360px;
-        min-height: 256px;
+        min-height: 200px;
         background-color: #fff;
         box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.503143);
         border-radius: 10px;
@@ -347,7 +376,7 @@ body{
             align-items: center;
             justify-content: center;
             height: 80%;
-            margin-top: 20%;
+            margin-top: 15%;
             p{
                 font-weight: 700;
                 color: #69707D;
@@ -363,7 +392,7 @@ body{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-bottom: 30px;
+                margin-bottom: 15px;
                 .container__child{
                     display: flex;
                     justify-content: center;
@@ -372,6 +401,7 @@ body{
                         margin-right: 10px;
                     }
                     .remove__order{
+                        margin-top: 3px;
                         cursor: pointer;
                         &:hover path{
                             fill: #EA2027;
@@ -411,7 +441,7 @@ body{
                 border: 0;
                 font-weight: 700;
                 color: #FFFFFF;
-                margin-bottom: 20px;
+                margin-bottom: 15px;
             }
         }
     }
@@ -438,7 +468,6 @@ body{
                     width: 56px;
                     height: 56px;
                     background-color: #fff;
-                    z-index: 999999;
                     border-radius: 100%;
                     top: calc(50% - 28px);
                     cursor: pointer;
