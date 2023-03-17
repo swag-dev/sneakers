@@ -20,4 +20,8 @@ closeNav.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
     styleLeft(`-250px`)
     changeOpacity(`0`)
+<<<<<<< HEAD
 })
+=======
+}) 
+>>>>>>> 6cf1c7277996f525977d14f62e8bf1348fc55018
