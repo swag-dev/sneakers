@@ -1,3 +1,4 @@
+
 // cart adder
 let modal = document.querySelector('.cart__modal'),
     cartImg = document.querySelectorAll('.cart__img'),
@@ -102,4 +103,3 @@ let modal = document.querySelector('.cart__modal'),
         }
     }
     orders.textContent = prevOrdersSum
-    console.log(orders.innerText)
