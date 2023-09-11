@@ -1,4 +1,4 @@
-let discount = '2023-8-10'
+let discount = '2023-10-10'
 
 function addZero(timeUnit){
     if(timeUnit < 10){
